@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Script Health Check - The Writer's Forge</title>
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1067662558776052');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1067662558776052&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
     <style>
         * {
             margin: 0;
@@ -1020,6 +1039,11 @@
         let answers = {};
         
         function startAssessment() {
+            // Track quiz start
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'InitiateCheckout');
+            }
+            
             document.getElementById('landingPage').classList.add('hidden');
             document.getElementById('assessmentSection').classList.remove('hidden');
             window.scrollTo(0, 0);
@@ -1153,6 +1177,14 @@
             if (q5Pass) numericalScore = Math.max(numericalScore, 70);
             if (allEssentialsPass) numericalScore = 100;
             
+            // Track quiz completion as Lead
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'Lead', {
+                    content_name: 'Script Health Check Quiz',
+                    status: allEssentialsPass ? 'complete' : 'needs_work'
+                });
+            }
+            
             console.log('Assessment completed:', answers);
             
             document.getElementById('assessmentSection').classList.add('hidden');
@@ -1200,7 +1232,7 @@
                 ctaHTML += '<h2>Join The Writer\'s Forge</h2>';
                 ctaHTML += '<p>This is where I teach what I learned from the pros. Diagnostic screenwriting. How to see what\'s broken. How to write with soul instead of formulas.</p>';
                 ctaHTML += '<p>It\'s free. No catch. Just writers doing the work together.</p>';
-                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white">Join The Writer\'s Forge (Free)</a>';
+                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white" onclick="trackForgeClick()">Join The Writer\'s Forge (Free)</a>';
             } else if (!q3Pass) {
                 diagnosticHTML += '<h2>You\'re Missing Soul.</h2>';
                 diagnosticHTML += '<p>That\'s not a "fix this and you\'re golden" problem. <strong>That\'s a fundamental problem.</strong></p>';
@@ -1219,7 +1251,7 @@
                 ctaHTML += '<h2>Join The Writer\'s Forge</h2>';
                 ctaHTML += '<p>This is a free community where we do the work. Where we learn to write from the heart, not the head. Where we crack ourselves open.</p>';
                 ctaHTML += '<p>I\'ll show you what to look for. But you have to do the work.</p>';
-                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white">Join The Writer\'s Forge (Free)</a>';
+                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white" onclick="trackForgeClick()">Join The Writer\'s Forge (Free)</a>';
             } else if (!q4Pass) {
                 diagnosticHTML += '<h2>Your Character Doesn\'t Resonate on a Primal Level.</h2>';
                 diagnosticHTML += '<p>The audience doesn\'t see themselves in your protagonist. And if they don\'t see themselves, they don\'t care.</p>';
@@ -1233,7 +1265,7 @@
                 ctaHTML += '<h2>Join The Writer\'s Forge</h2>';
                 ctaHTML += '<p>Learn diagnostic screenwriting. How to build characters that connect on a visceral level. How to see what pros see.</p>';
                 ctaHTML += '<p>It\'s free. No catch. Just the work.</p>';
-                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white">Join The Writer\'s Forge (Free)</a>';
+                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white" onclick="trackForgeClick()">Join The Writer\'s Forge (Free)</a>';
             } else if (!q5Pass) {
                 diagnosticHTML += '<h2>Your Character Is All Surface.</h2>';
                 diagnosticHTML += '<p>They don\'t have the internal complexity that makes great characters breathe.</p>';
@@ -1248,7 +1280,7 @@
                 
                 ctaHTML += '<h2>Join The Writer\'s Forge</h2>';
                 ctaHTML += '<p>Learn how to build layered characters with internal secrets that drive external action. Join a community of writers doing the real work.</p>';
-                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white">Join The Writer\'s Forge (Free)</a>';
+                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white" onclick="trackForgeClick()">Join The Writer\'s Forge (Free)</a>';
             } else if (!q2Pass) {
                 diagnosticHTML += '<h2>You\'re Not Revising With Intention.</h2>';
                 diagnosticHTML += '<p>You wrote your opening before you knew what your story was about, and you never went back to fix it.</p>';
@@ -1261,7 +1293,7 @@
                 
                 ctaHTML += '<h2>Join The Writer\'s Forge</h2>';
                 ctaHTML += '<p>Learn how pros think. How they diagnose first, then rewrite with intention. How they structure stories around emotional truth, not just plot.</p>';
-                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white">Join The Writer\'s Forge (Free)</a>';
+                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white" onclick="trackForgeClick()">Join The Writer\'s Forge (Free)</a>';
             } else {
                 diagnosticHTML += '<h2>You\'re Missing Several Essential Elements.</h2>';
                 diagnosticHTML += '<p>This isn\'t about polish—it\'s about foundation.</p>';
@@ -1270,7 +1302,7 @@
                 ctaHTML += '<h2>Join The Writer\'s Forge</h2>';
                 ctaHTML += '<p>Start from the beginning. Learn the fundamentals of emotional storytelling. Do the work with other writers who are serious about going deeper.</p>';
                 ctaHTML += '<p>It\'s free. No gurus. No formulas. Just the work.</p>';
-                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white">Join The Writer\'s Forge (Free)</a>';
+                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white" onclick="trackForgeClick()">Join The Writer\'s Forge (Free)</a>';
             }
             
             diagnosticHTML += '</div>';
@@ -1279,6 +1311,16 @@
             bullshitCard.innerHTML = bullshitHTML;
             diagnosticContent.innerHTML = diagnosticHTML;
             ctaContent.innerHTML = ctaHTML;
+        }
+        
+        function trackForgeClick() {
+            // Track when someone clicks to join The Writer's Forge
+            if (typeof fbq !== 'undefined') {
+                fbq('track', 'ViewContent', {
+                    content_name: 'Writers Forge CTA',
+                    content_category: 'Community Join'
+                });
+            }
         }
     </script>
 </body>
