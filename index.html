@@ -140,6 +140,86 @@
             font-weight: 700;
         }
         
+        .benefits-list {
+            text-align: left;
+            margin: 40px auto;
+            max-width: 650px;
+        }
+        
+        .benefits-headline {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            font-size: 17px;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .benefit-item::before {
+            content: "✓";
+            color: #ff4500;
+            font-size: 24px;
+            font-weight: 700;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .benefit-item strong {
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+        
+        .testimonials-section {
+            background: #f5f5f5;
+            padding: 60px 20px;
+            margin-top: 40px;
+        }
+        
+        .testimonials-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .testimonials-headline {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .testimonial {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #ff4500;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-text {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-size: 16px;
+            font-weight: 700;
+            color: #ff4500;
+            text-align: right;
+        }
+        
         .truth-callout {
             background: linear-gradient(135deg, #ff4500 0%, #ff6b35 100%);
             color: #fff;
@@ -577,6 +657,26 @@
                 font-size: 17px;
             }
             
+            .benefits-headline {
+                font-size: 22px;
+            }
+            
+            .benefit-item {
+                font-size: 16px;
+            }
+            
+            .testimonials-headline {
+                font-size: 24px;
+            }
+            
+            .testimonial {
+                padding: 25px 20px;
+            }
+            
+            .testimonial-text {
+                font-size: 16px;
+            }
+            
             .truth-callout {
                 font-size: 20px;
                 padding: 25px 20px;
@@ -665,6 +765,57 @@
                 
                 <p class="today-text">That's why I created <strong>The Writer's Forge</strong>, a community for screenwriters where I share what I learned from 20+ years of writing and selling screenplays to every major studio in town.</p>
                 
+                <div class="benefits-list">
+                    <h3 class="benefits-headline">Here's what you'll learn:</h3>
+                    
+                    <div class="benefit-item">
+                        <span><strong>Diagnose what's actually broken</strong> in your script—not just symptoms, but root causes</span>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span><strong>Stop rewriting in circles</strong>—learn to see what pros see so you can fix it the first time</span>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span><strong>Write characters with soul</strong>—not formulas or plot points, but primal themes that hit audiences deep</span>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span><strong>Build a practice that goes deeper</strong>—learn to inhabit your characters instead of pushing them through obstacle courses</span>
+                    </div>
+                    
+                    <div class="benefit-item">
+                        <span><strong>Get feedback that actually helps</strong>—join a community that teaches you to diagnose, not just critique</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TESTIMONIALS SECTION -->
+        <div class="testimonials-section">
+            <div class="testimonials-container">
+                <h2 class="testimonials-headline">Don't just take my word for it. Here's what writers say:</h2>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"I thought my script was firing on all cylinders, but when I started working with David he just took every scene deeper and deeper. Until I saw my own work and its potential in a whole new light. I never knew what I was really capable of until I worked with him."</p>
+                    <p class="testimonial-author">— Maria</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"What's great about the way David works is he doesn't tell me how he would do it. He pushes me to find my voice and to reach deep inside me to become even clearer. It's not about him, it's about him teaching me to bring more of myself to my work."</p>
+                    <p class="testimonial-author">— Dylan</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"To be honest, his notes scared me at first. I'd given my outline to several friends who loved it and thought it was ready to go, but they weren't professional writers. David broke it down and showed me how to make my script a love letter to the actor I hope to attach. He explained to me the difference between a shooting script and a script designed to attach talent so the project can sell. That was invaluable."</p>
+                    <p class="testimonial-author">— Matthew</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FINAL CTA SECTION -->
+        <div class="today-section" style="padding-top: 40px;">
+            <div class="today-container">
                 <p class="today-text">Now, I can diagnose someone's script with six simple questions that get to the heart of whether they've done the work to write a compelling draft—comedy, drama, animation. It doesn't matter.</p>
                 
                 <div class="truth-callout">
@@ -675,7 +826,7 @@
                 
                 <p class="today-text" style="font-size: 20px; font-weight: 600; margin-top: 40px;">To see what I mean, check out the quiz below and see if it resonates.</p>
                 
-                <p class="today-text">If it does, I'll send you my <strong>10 Iron Clad Rules for a Writing Life</strong>, plus an invitation to The Writer's Forge where we can build together!</p>
+                <p class="today-text">If it does, I'll send you an invitation to <strong>The Writer's Forge</strong>—where you'll get my <strong>10 Iron Clad Rules for a Writing Life</strong>, plus a free community where I share diagnostic tools, deep-dive workshops, and the principles that took me from struggling to $2.5 billion in box office.</p>
                 
                 <button class="cta-button" onclick="startAssessment()">Take the 6-Question Script Health Check</button>
                 
