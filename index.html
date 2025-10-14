@@ -83,32 +83,6 @@
             font-weight: 700;
         }
         
-        .cta-section {
-            background: #fff;
-            padding: 60px 20px;
-        }
-        
-        .cta-container {
-            max-width: 700px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .cta-headline {
-            font-size: 32px;
-            font-weight: 800;
-            color: #1a1a1a;
-            margin-bottom: 20px;
-            line-height: 1.3;
-        }
-        
-        .cta-subhead {
-            font-size: 18px;
-            color: #555;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-        
         .story-section {
             background: #f5f5f5;
             padding: 60px 20px;
@@ -142,28 +116,67 @@
             color: #333;
         }
         
-        .final-cta {
-            background: linear-gradient(135deg, #ff4500 0%, #ff6b35 100%);
+        .transformation-section {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             color: #fff;
             padding: 60px 20px;
+        }
+        
+        .transformation-text {
+            font-size: 20px;
+            line-height: 1.8;
+            color: #e0e0e0;
+            margin-bottom: 25px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .transformation-text strong {
+            color: #fff;
+            font-weight: 700;
+        }
+        
+        .today-section {
+            background: #fff;
+            padding: 60px 20px;
+        }
+        
+        .today-container {
+            max-width: 700px;
+            margin: 0 auto;
             text-align: center;
         }
         
-        .final-cta-container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .final-cta h2 {
+        .today-headline {
             font-size: 32px;
-            margin-bottom: 20px;
             font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 30px;
+            line-height: 1.3;
         }
         
-        .final-cta p {
-            font-size: 19px;
-            margin: 20px 0;
-            line-height: 1.6;
+        .today-text {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        
+        .today-text strong {
+            color: #ff4500;
+            font-weight: 700;
+        }
+        
+        .truth-callout {
+            background: linear-gradient(135deg, #ff4500 0%, #ff6b35 100%);
+            color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.4;
         }
         
         .credentials {
@@ -214,15 +227,6 @@
             background: #ff6b35;
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(255, 69, 0, 0.4);
-        }
-        
-        .final-cta .cta-button {
-            background: #fff;
-            color: #ff4500;
-        }
-        
-        .final-cta .cta-button:hover {
-            background: #f5f5f5;
         }
         
         .assurance {
@@ -586,8 +590,21 @@
                 font-size: 18px;
             }
             
-            .cta-headline {
+            .today-headline {
                 font-size: 26px;
+            }
+            
+            .today-text {
+                font-size: 17px;
+            }
+            
+            .transformation-text {
+                font-size: 18px;
+            }
+            
+            .truth-callout {
+                font-size: 20px;
+                padding: 25px 20px;
             }
             
             .cta-button, .btn {
@@ -596,7 +613,12 @@
             }
             
             .story-text {
-                font-size: 16px;
+                font-size: 17px;
+            }
+            
+            .mentor-callout {
+                font-size: 18px;
+                padding: 25px 20px;
             }
             
             .card {
@@ -624,6 +646,7 @@
 <body>
     <!-- LANDING PAGE -->
     <div id="landingPage">
+        <!-- SECTION 1: THE HOOK (Dark) -->
         <div class="hero">
             <div class="container">
                 <div class="logo">
@@ -636,21 +659,72 @@
                 <div class="billion">$2.5 BILLION LATER</div>
                 
                 <div class="hook">
-                    <p>I succeeded. But here's the truth.</p>
-                    <p><strong>That exec wasn't wrong about me.</strong></p>
-                    <p style="margin-top: 20px;">I had talent. But I was all over the map—jumping into drafts because an idea "felt so good it would write itself," then stalling out by page 30.</p>
-                    <p style="margin-top: 20px;"><strong>If I kept doing what I was doing, I never would have made it as a writer.</strong></p>
-                    <p style="margin-top: 20px;">Then I met a mentor who changed everything.</p>
+                    <p>Yes, I succeeded. But the truth is, that exec was right about me.</p>
+                    <p style="margin-top: 20px;"><strong>My career was doomed before it started.</strong></p>
+                    <p style="margin-top: 20px;">I had talent. But I was all over the map—jumping into drafts because an idea "felt so good it would write itself," then stalling out by page 30 again and again.</p>
+                    <p style="margin-top: 20px;"><strong>I never should have made it as a writer.</strong></p>
                 </div>
             </div>
         </div>
         
-        <div class="cta-section">
-            <div class="cta-container">
-                <h1 class="cta-headline">Six Questions That Get to the Soul of Your Script</h1>
-                <p class="cta-subhead">Most assessments test if you followed the rules. This one tests if you have soul.</p>
+        <!-- SECTION 2: THE CRISIS (Light) -->
+        <div class="story-section">
+            <div class="story-container">
+                <p class="story-text" style="font-size: 20px; font-weight: 600;">But I met a mentor who changed everything.</p>
                 
-                <button class="cta-button" onclick="startAssessment()">Take the Script Health Check</button>
+                <p class="story-text">A successful screenwriter who read my work and bluntly said:</p>
+                
+                <div class="mentor-callout">
+                    "You're funny, but all over the map. And there's way too many places I see the writer trying to be clever instead of being true to his characters and their world."
+                </div>
+                
+                <p class="story-text"><strong>It was devastating.</strong></p>
+                
+                <p class="story-text">But as I dug deeper, I realized he was right.</p>
+                
+                <div class="highlight" style="text-align: center; font-size: 22px; font-weight: 700; color: #1a1a1a;">
+                    My characters, my world... had no soul.
+                </div>
+                
+                <p class="story-text">I didn't need better jokes or tighter structure. And it didn't matter how many rewrites I did.</p>
+                
+                <p class="story-text"><strong>If I wasn't writing about something that deeply mattered, not just to the characters, but to the audience, I was doomed.</strong></p>
+            </div>
+        </div>
+        
+        <!-- SECTION 3: THE TRANSFORMATION (Dark) -->
+        <div class="transformation-section">
+            <div class="container">
+                <p class="transformation-text">He taught me about character and how to get to the heart of a script. Instead of hitting formulaic points the gurus handed out, he taught me how to diagnose what was actually broken, and rebuild from the foundation up.</p>
+                
+                <p class="transformation-text">And I went from struggling to <strong>Shrek 2, Disenchanted, Jimmy Neutron and $2.5 billion in box office.</strong></p>
+                
+                <p class="transformation-text" style="font-size: 22px; font-weight: 600;">Not because I was special. Because someone showed me what I couldn't see on my own.</p>
+            </div>
+        </div>
+        
+        <!-- SECTION 4: TODAY / THE OFFER (Light with Orange) -->
+        <div class="today-section">
+            <div class="today-container">
+                <h2 class="today-headline">Today, I see the same in writers who come to me with their scripts.</h2>
+                
+                <p class="today-text">Trying to fix a second act that inevitably drags, because the character and their journeys are about plot and not grounded in something that's PRIMAL and hits the audience on a deep emotional level from page 1.</p>
+                
+                <p class="today-text">That's why I created <strong>The Writer's Forge</strong>, a community for screenwriters where I share what I learned from 20+ years of writing and selling screenplays to every major studio in town—scripts that amassed $2.5 billion in box office.</p>
+                
+                <p class="today-text">Now, I can diagnose someone's script with six simple questions that get to the heart of whether they've done the work to write a compelling draft—comedy, drama, animation. It doesn't matter.</p>
+                
+                <div class="truth-callout">
+                    Because the hard truth is, if your script's not working, it's not your script, it's you.
+                </div>
+                
+                <p class="today-text">I learned that painful lesson years ago. But it freed me to be the writer I always wanted to be and changed everything!</p>
+                
+                <p class="today-text" style="font-size: 20px; font-weight: 600; margin-top: 40px;">To see what I mean, check out the quiz below and see if it resonates.</p>
+                
+                <p class="today-text">If it does, I'll send you my <strong>10 Iron Clad Rules for a Writing Life</strong>, plus an invitation to The Writer's Forge where we can build together!</p>
+                
+                <button class="cta-button" onclick="startAssessment()">Take the 6-Question Script Health Check</button>
                 
                 <div class="assurance">
                     <div class="assurance-item">✓ Takes 3 minutes</div>
@@ -660,42 +734,7 @@
             </div>
         </div>
         
-        <div class="story-section">
-            <div class="story-container">
-                <p class="story-text">Then I met a mentor who changed everything because he could see what I couldn't.</p>
-                
-                <p class="story-text">He was a screenwriting professional who told me:</p>
-                
-                <div class="mentor-callout">
-                    "You're funny, but all over the map. You need to start acting like a pro."
-                </div>
-                
-                <p class="story-text">He taught me about character and how to get to the soul of a script. Instead of hitting formulaic points the gurus handed out by the thousands, he taught me how to diagnose what was actually broken, and rebuild from the foundation up.</p>
-                
-                <p class="story-text">And I went from struggling to Shrek 2, Disenchanted, Jimmy Neutron and $2.5 billion in box office.</p>
-                
-                <p class="story-text">Not because I was special. <strong>Because someone showed me what I couldn't see on my own.</strong></p>
-                
-                <p class="story-text" style="margin-top: 40px; font-size: 20px; font-weight: 600; color: #1a1a1a;">Now, I want to do the same for screenwriters who are making the same mistakes I made when I started out.</p>
-            </div>
-        </div>
-        
-        <div class="final-cta">
-            <div class="final-cta-container">
-                <h2>Take the 3-Minute Script Health Check</h2>
-                
-                <p>Answer six questions. Get a brutally honest assessment of what's actually broken in your screenplay.</p>
-                
-                <p><strong>This isn't about formulas. It's about soul.</strong></p>
-                
-                <button class="cta-button" onclick="startAssessment()">Start the Script Health Check Now</button>
-                
-                <div style="margin-top: 30px; font-size: 16px; opacity: 0.9;">
-                    <div>✓ Free • ✓ 3 minutes • ✓ Immediate results</div>
-                </div>
-            </div>
-        </div>
-        
+        <!-- CREDENTIALS FOOTER -->
         <div class="credentials">
             <div class="credentials-container">
                 <h2>J. David Stem</h2>
@@ -1134,13 +1173,3 @@
     </script>
 </body>
 </html>
-```
-
----
-
-**Done! This is one complete HTML file with:**
-- Landing page (hero + story + CTAs)
-- Assessment (8 questions)
-- Results (score + diagnosis + CTA to Forge)
-
-**Just save this as `index.html` and upload to GitHub Pages. One file. Done.**
