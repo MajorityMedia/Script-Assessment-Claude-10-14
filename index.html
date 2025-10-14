@@ -71,75 +71,55 @@
             letter-spacing: 2px;
         }
         
-        .hook {
-            font-size: 22px;
-            line-height: 1.5;
-            margin: 30px 0;
-            color: #e0e0e0;
-        }
-        
-        .hook strong {
-            color: #fff;
-            font-weight: 700;
-        }
-        
-        .story-section {
-            background: #f5f5f5;
-            padding: 60px 20px;
-        }
-        
-        .story-container {
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .story-text {
-            font-size: 18px;
-            line-height: 1.8;
-            color: #333;
-            margin-bottom: 25px;
-        }
-        
-        .story-text strong {
-            color: #ff4500;
-            font-weight: 700;
-        }
-        
-        .mentor-callout {
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            border-left: 4px solid #ff4500;
-            margin: 30px 0;
-            font-style: italic;
-            font-size: 19px;
-            color: #333;
-        }
-        
-        .transformation-section {
-            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-            color: #fff;
-            padding: 60px 20px;
-        }
-        
-        .transformation-text {
+        .hero-text {
             font-size: 20px;
-            line-height: 1.8;
+            line-height: 1.7;
+            margin: 25px 0;
             color: #e0e0e0;
-            margin-bottom: 25px;
             max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
         
-        .transformation-text strong {
+        .hero-text strong {
             color: #fff;
             font-weight: 700;
         }
         
+        .credits {
+            font-size: 18px;
+            color: #ccc;
+            margin: 20px 0;
+            font-style: italic;
+        }
+        
+        .mentor-callout {
+            background: rgba(255, 69, 0, 0.1);
+            padding: 25px 30px;
+            border-radius: 8px;
+            border-left: 4px solid #ff4500;
+            margin: 30px auto;
+            font-style: italic;
+            font-size: 19px;
+            color: #fff;
+            max-width: 650px;
+        }
+        
+        .soul-highlight {
+            background: rgba(255, 69, 0, 0.15);
+            border-left: 4px solid #ff4500;
+            padding: 20px 30px;
+            margin: 25px auto;
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+            max-width: 650px;
+            border-radius: 6px;
+        }
+        
         .today-section {
             background: #fff;
-            padding: 60px 20px;
+            padding: 60px 20px 80px;
         }
         
         .today-container {
@@ -148,19 +128,11 @@
             text-align: center;
         }
         
-        .today-headline {
-            font-size: 32px;
-            font-weight: 800;
-            color: #1a1a1a;
-            margin-bottom: 30px;
-            line-height: 1.3;
-        }
-        
         .today-text {
             font-size: 18px;
-            line-height: 1.7;
+            line-height: 1.8;
             color: #333;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         
         .today-text strong {
@@ -173,10 +145,11 @@
             color: #fff;
             padding: 30px;
             border-radius: 8px;
-            margin: 30px 0;
+            margin: 35px auto;
             font-size: 22px;
             font-weight: 700;
             line-height: 1.4;
+            max-width: 600px;
         }
         
         .credentials {
@@ -586,20 +559,22 @@
                 font-size: 42px;
             }
             
-            .hook {
+            .hero-text {
                 font-size: 18px;
             }
             
-            .today-headline {
-                font-size: 26px;
+            .mentor-callout {
+                font-size: 17px;
+                padding: 20px 25px;
+            }
+            
+            .soul-highlight {
+                font-size: 20px;
+                padding: 18px 25px;
             }
             
             .today-text {
                 font-size: 17px;
-            }
-            
-            .transformation-text {
-                font-size: 18px;
             }
             
             .truth-callout {
@@ -610,15 +585,6 @@
             .cta-button, .btn {
                 padding: 18px 40px;
                 font-size: 18px;
-            }
-            
-            .story-text {
-                font-size: 17px;
-            }
-            
-            .mentor-callout {
-                font-size: 18px;
-                padding: 25px 20px;
             }
             
             .card {
@@ -646,7 +612,7 @@
 <body>
     <!-- LANDING PAGE -->
     <div id="landingPage">
-        <!-- SECTION 1: THE HOOK (Dark) -->
+        <!-- HERO SECTION (Dark - The Full Story) -->
         <div class="hero">
             <div class="container">
                 <div class="logo">
@@ -658,59 +624,44 @@
                 
                 <div class="billion">$2.5 BILLION LATER</div>
                 
-                <div class="hook">
-                    <p>Yes, I succeeded. But the truth is, that exec was right about me.</p>
-                    <p style="margin-top: 20px;"><strong>My career was doomed before it started.</strong></p>
-                    <p style="margin-top: 20px;">I had talent. But I was all over the map—jumping into drafts because an idea "felt so good it would write itself," then stalling out by page 30 again and again.</p>
-                    <p style="margin-top: 20px;"><strong>I never should have made it as a writer.</strong></p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- SECTION 2: THE CRISIS (Light) -->
-        <div class="story-section">
-            <div class="story-container">
-                <p class="story-text" style="font-size: 20px; font-weight: 600;">But I met a mentor who changed everything.</p>
+                <p class="hero-text">Yes, I succeeded and wrote massive hits.</p>
                 
-                <p class="story-text">A successful screenwriter who read my work and bluntly said:</p>
+                <p class="credits">Shrek 2, Jimmy Neutron, Disenchanted, Rugrats, and many more.</p>
+                
+                <p class="hero-text"><strong>But that exec was right. I never would have made it as a writer if something drastic hadn't changed.</strong></p>
+                
+                <p class="hero-text">I was all over the map—jumping into drafts because an idea was "so good it would write itself," then stalling out by page 30 again and again.</p>
+                
+                <p class="hero-text"><strong>Structure? Forget about it. Who needs structure when you've got jokes!</strong></p>
+                
+                <p class="hero-text" style="margin-top: 40px; font-size: 22px; font-weight: 600;">Then a mentor changed everything.</p>
+                
+                <p class="hero-text">A successful screenwriter read my work and bluntly said:</p>
                 
                 <div class="mentor-callout">
-                    "You're funny, but all over the map. And there's way too many places I see the writer trying to be clever instead of being true to his characters and their world."
+                    "You're funny, but there's way too many places I see the writer trying to be clever instead of being true to his characters and their world. I feel you showing off and I hate that."
                 </div>
                 
-                <p class="story-text"><strong>It was devastating.</strong></p>
+                <p class="hero-text"><strong>It was devastating. But he was right.</strong></p>
                 
-                <p class="story-text">But as I dug deeper, I realized he was right.</p>
-                
-                <div class="highlight" style="text-align: center; font-size: 22px; font-weight: 700; color: #1a1a1a;">
-                    My characters, my world... had no soul.
+                <div class="soul-highlight">
+                    It didn't matter how many rewrites I did or how much I tightened up the second act—my characters and world... had no soul.
                 </div>
                 
-                <p class="story-text">I didn't need better jokes or tighter structure. And it didn't matter how many rewrites I did.</p>
+                <p class="hero-text">No wonder agents didn't respond to my scripts.</p>
                 
-                <p class="story-text"><strong>If I wasn't writing about something that deeply mattered, not just to the characters, but to the audience, I was doomed.</strong></p>
+                <p class="hero-text">But he taught me how to diagnose what was broken, and rebuild from the foundation up. Because he could see what I couldn't see on my own. <strong>That's what a great mentor does.</strong></p>
             </div>
         </div>
         
-        <!-- SECTION 3: THE TRANSFORMATION (Dark) -->
-        <div class="transformation-section">
-            <div class="container">
-                <p class="transformation-text">He taught me about character and how to get to the heart of a script. Instead of hitting formulaic points the gurus handed out, he taught me how to diagnose what was actually broken, and rebuild from the foundation up.</p>
-                
-                <p class="transformation-text">And I went from struggling to <strong>Shrek 2, Disenchanted, Jimmy Neutron and $2.5 billion in box office.</strong></p>
-                
-                <p class="transformation-text" style="font-size: 22px; font-weight: 600;">Not because I was special. Because someone showed me what I couldn't see on my own.</p>
-            </div>
-        </div>
-        
-        <!-- SECTION 4: TODAY / THE OFFER (Light with Orange) -->
+        <!-- TODAY SECTION (Light - The Offer) -->
         <div class="today-section">
             <div class="today-container">
-                <h2 class="today-headline">Today, I see the same in writers who come to me with their scripts.</h2>
+                <p class="today-text" style="font-size: 20px; font-weight: 600;">Today, I see the same in writers who come to me with their scripts.</p>
                 
-                <p class="today-text">Trying to fix a second act that inevitably drags, because the character and their journeys are about plot and not grounded in something that's PRIMAL and hits the audience on a deep emotional level from page 1.</p>
+                <p class="today-text">Focusing on plot points and themes they push their characters through like chess pieces, rather than building characters that themes emerge from—<strong>PRIMAL</strong> themes that hit the audience on a deep emotional level from page 1.</p>
                 
-                <p class="today-text">That's why I created <strong>The Writer's Forge</strong>, a community for screenwriters where I share what I learned from 20+ years of writing and selling screenplays to every major studio in town—scripts that amassed $2.5 billion in box office.</p>
+                <p class="today-text">That's why I created <strong>The Writer's Forge</strong>, a community for screenwriters where I share what I learned from 20+ years of writing and selling screenplays to every major studio in town.</p>
                 
                 <p class="today-text">Now, I can diagnose someone's script with six simple questions that get to the heart of whether they've done the work to write a compelling draft—comedy, drama, animation. It doesn't matter.</p>
                 
@@ -787,15 +738,7 @@
                     <p style="text-align: center; color: #999; font-size: 20px;">out of 100</p>
                 </div>
                 
-                <div class="bullshit-card">
-                    <h2>But here's the truth:</h2>
-                    <p>There is no 65/100 in Hollywood.</p>
-                    <p>Your script either makes someone want to buy it, or it gets tossed in the pile. There is no "60% pile" you can work your way out of.</p>
-                    <p><strong>A plane missing its left wing isn't 75% flying. It's not flying at all.</strong></p>
-                    <p>The same is true for scripts. You either have the essentials—soul, primal connection, character depth—or you don't.</p>
-                    <p style="margin-top: 30px; font-size: 20px;"><strong>So forget the score. Here's what actually matters:</strong></p>
-                </div>
-                
+                <div id="bullshitCard"></div>
                 <div id="diagnosticContent"></div>
                 <div id="ctaContent"></div>
             </div>
@@ -1064,14 +1007,27 @@
             window.scrollTo(0, 0);
             document.getElementById('scoreDisplay').textContent = numericalScore;
             
-            generateDiagnostic({ q1Score, q2Pass, q3Pass, q4Pass, q5Pass, allEssentialsPass, answers });
+            generateDiagnostic({ q1Score, q2Pass, q3Pass, q4Pass, q5Pass, allEssentialsPass, answers, numericalScore });
         }
         
         function generateDiagnostic(results) {
             const diagnosticContent = document.getElementById('diagnosticContent');
             const ctaContent = document.getElementById('ctaContent');
+            const bullshitCard = document.getElementById('bullshitCard');
             
-            const { q1Score, q2Pass, q3Pass, q4Pass, q5Pass, allEssentialsPass, answers } = results;
+            const { q1Score, q2Pass, q3Pass, q4Pass, q5Pass, allEssentialsPass, answers, numericalScore } = results;
+            
+            // Generate the truth card with dynamic score
+            let bullshitHTML = `
+                <div class="bullshit-card">
+                    <h2>But here's the truth:</h2>
+                    <p>There is no ${numericalScore}/100 in Hollywood.</p>
+                    <p>Your script either makes someone want to buy it, or it gets tossed in the pile. There is no "${numericalScore}% pile" you can work your way out of.</p>
+                    <p><strong>A plane missing its left wing isn't ${numericalScore}% flying. It's not flying at all.</strong></p>
+                    <p>The same is true for scripts. You either have the essentials—soul, primal connection, character depth—or you don't.</p>
+                    <p style="margin-top: 30px; font-size: 20px;"><strong>So forget the score. Here's what actually matters:</strong></p>
+                </div>
+            `;
             
             let diagnosticHTML = '<div class="card">';
             let ctaHTML = '<div class="cta-card">';
@@ -1167,6 +1123,7 @@
             diagnosticHTML += '</div>';
             ctaHTML += '</div>';
             
+            bullshitCard.innerHTML = bullshitHTML;
             diagnosticContent.innerHTML = diagnosticHTML;
             ctaContent.innerHTML = ctaHTML;
         }
