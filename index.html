@@ -12,12 +12,13 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: #333;
             background: #000;
         }
         
+        /* LANDING PAGE STYLES */
         .hero {
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
             color: #fff;
@@ -108,41 +109,6 @@
             line-height: 1.6;
         }
         
-        .cta-button {
-            background: #ff4500;
-            color: white;
-            border: none;
-            padding: 20px 50px;
-            font-size: 20px;
-            font-weight: 700;
-            border-radius: 8px;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
-            transition: all 0.3s;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin: 30px 0;
-            display: inline-block;
-            text-decoration: none;
-        }
-        
-        .cta-button:hover {
-            background: #ff6b35;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(255, 69, 0, 0.4);
-        }
-        
-        .assurance {
-            font-size: 15px;
-            color: #666;
-            margin-top: 20px;
-        }
-        
-        .assurance-item {
-            display: inline-block;
-            margin: 5px 15px;
-        }
-        
         .story-section {
             background: #f5f5f5;
             padding: 60px 20px;
@@ -200,17 +166,6 @@
             line-height: 1.6;
         }
         
-        .final-cta .cta-button {
-            background: #fff;
-            color: #ff4500;
-            margin-top: 30px;
-        }
-        
-        .final-cta .cta-button:hover {
-            background: #f5f5f5;
-            color: #ff4500;
-        }
-        
         .credentials {
             background: #2d2d2d;
             color: #fff;
@@ -236,6 +191,388 @@
             color: #ccc;
         }
         
+        /* SHARED BUTTON STYLES */
+        .btn, .cta-button {
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 20px 50px;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 30px 0;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .btn:hover, .cta-button:hover {
+            background: #ff6b35;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 69, 0, 0.4);
+        }
+        
+        .final-cta .cta-button {
+            background: #fff;
+            color: #ff4500;
+        }
+        
+        .final-cta .cta-button:hover {
+            background: #f5f5f5;
+        }
+        
+        .assurance {
+            font-size: 15px;
+            color: #666;
+            margin-top: 20px;
+        }
+        
+        .assurance-item {
+            display: inline-block;
+            margin: 5px 15px;
+        }
+        
+        /* ASSESSMENT STYLES */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+        }
+        
+        .progress-bar {
+            background: rgba(255,255,255,0.1);
+            height: 8px;
+            border-radius: 10px;
+            margin: 30px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: linear-gradient(90deg, #ff4500 0%, #ff6b35 100%);
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 10px;
+        }
+        
+        .progress-text {
+            text-align: center;
+            font-size: 14px;
+            color: #ccc;
+            margin-top: 10px;
+        }
+        
+        .card {
+            background: #fff;
+            border-radius: 12px;
+            padding: 50px 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .card h1, .card h2 {
+            color: #1a1a1a;
+            margin-bottom: 20px;
+        }
+        
+        .card h1 {
+            font-size: 32px;
+            font-weight: 800;
+            line-height: 1.3;
+        }
+        
+        .card h2 {
+            font-size: 28px;
+        }
+        
+        .card p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #444;
+        }
+        
+        .highlight {
+            background: #fff5f0;
+            border-left: 4px solid #ff4500;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .question-number {
+            font-size: 14px;
+            font-weight: 700;
+            color: #ff4500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        
+        .question-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .question-subtext {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+        
+        .input-group {
+            margin-bottom: 20px;
+        }
+        
+        .input-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #ff4500;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: flex-start;
+            padding: 18px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background: #f9f9f9;
+        }
+        
+        .radio-option:hover {
+            border-color: #ff4500;
+            background: #fff;
+        }
+        
+        .radio-option.selected {
+            border-color: #ff4500;
+            background: #fff5f0;
+        }
+        
+        .radio-option input[type="radio"] {
+            margin-right: 15px;
+            margin-top: 3px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #ff4500;
+            flex-shrink: 0;
+        }
+        
+        .radio-option label {
+            cursor: pointer;
+            font-size: 16px;
+            color: #333;
+            flex: 1;
+            line-height: 1.5;
+        }
+        
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .btn-primary {
+            background: #ff4500;
+            color: white;
+            flex: 1;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+            padding: 16px 35px;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-primary:hover:not(:disabled) {
+            background: #ff6b35;
+            transform: translateY(-2px);
+        }
+        
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .btn-secondary {
+            background: #e0e0e0;
+            color: #666;
+            padding: 16px 25px;
+            font-size: 16px;
+            font-weight: 700;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-secondary:hover {
+            background: #d0d0d0;
+        }
+        
+        .btn-white {
+            background: #fff;
+            color: #ff4500;
+            border: 2px solid #ff4500;
+            margin: 10px;
+            padding: 16px 35px;
+            font-size: 16px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-white:hover {
+            background: #fff5f0;
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        .reassurance {
+            text-align: center;
+            font-size: 13px;
+            color: #999;
+            margin-top: 20px;
+        }
+        
+        .score-display {
+            font-size: 80px;
+            font-weight: 900;
+            color: #ff4500;
+            margin: 30px 0;
+            line-height: 1;
+            text-align: center;
+        }
+        
+        .score-label {
+            font-size: 18px;
+            color: #666;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .bullshit-card {
+            background: #1a1a1a;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+            border: 3px solid #ff4500;
+            color: #e0e0e0;
+        }
+        
+        .bullshit-card h2 {
+            font-size: 32px;
+            color: #ff4500;
+            margin-bottom: 20px;
+        }
+        
+        .bullshit-card p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+        
+        .missing-section {
+            background: #fff5f0;
+            border-left: 4px solid #ff4500;
+            padding: 25px;
+            margin: 25px 0;
+            border-radius: 6px;
+        }
+        
+        .missing-section h3 {
+            font-size: 22px;
+            color: #1a1a1a;
+            margin-bottom: 15px;
+        }
+        
+        .missing-section p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        .cta-card {
+            background: linear-gradient(135deg, #ff4500 0%, #ff6b35 100%);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            text-align: center;
+            color: #fff;
+        }
+        
+        .cta-card h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        
+        .cta-card p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+        
         @media (max-width: 768px) {
             .quote {
                 font-size: 22px;
@@ -253,7 +590,7 @@
                 font-size: 26px;
             }
             
-            .cta-button {
+            .cta-button, .btn {
                 padding: 18px 40px;
                 font-size: 18px;
             }
@@ -261,96 +598,549 @@
             .story-text {
                 font-size: 16px;
             }
+            
+            .card {
+                padding: 30px 25px;
+            }
+            
+            .question-text {
+                font-size: 20px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+            
+            .btn-secondary {
+                order: 2;
+            }
+            
+            .score-display {
+                font-size: 60px;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- HERO SECTION -->
-    <div class="hero">
-        <div class="container">
-            <div class="logo">
-                <div class="logo-text">THE WRITER'S</div>
-                <div class="logo-main">FORGE</div>
+    <!-- LANDING PAGE -->
+    <div id="landingPage">
+        <div class="hero">
+            <div class="container">
+                <div class="logo">
+                    <div class="logo-text">THE WRITER'S</div>
+                    <div class="logo-main">FORGE</div>
+                </div>
+                
+                <p class="quote">"You'll never make a dime as a screenwriter..."</p>
+                
+                <div class="billion">$2.5 BILLION LATER</div>
+                
+                <div class="hook">
+                    <p>I succeeded. But here's the truth.</p>
+                    <p><strong>That exec wasn't wrong about me.</strong></p>
+                    <p style="margin-top: 20px;">I had talent. But I was all over the map—jumping into drafts because an idea "felt so good it would write itself," then stalling out by page 30.</p>
+                    <p style="margin-top: 20px;"><strong>If I kept doing what I was doing, I never would have made it as a writer.</strong></p>
+                    <p style="margin-top: 20px;">Then I met a mentor who changed everything.</p>
+                </div>
             </div>
-            
-            <p class="quote">"You'll never make a dime as a screenwriter..."</p>
-            
-            <div class="billion">$2.5 BILLION LATER</div>
-            
-            <div class="hook">
-                <p>I succeeded. But here's the truth.</p>
-                <p><strong>That exec wasn't wrong about me.</strong></p>
-                <p style="margin-top: 20px;">I had talent. But I was all over the map—jumping into drafts because an idea "felt so good it would write itself," then stalling out by page 30.</p>
-                <p style="margin-top: 20px;"><strong>If I kept doing what I was doing, I never would have made it as a writer.</strong></p>
-                <p style="margin-top: 20px;">Then I met a mentor who changed everything.</p>
+        </div>
+        
+        <div class="cta-section">
+            <div class="cta-container">
+                <h1 class="cta-headline">Six Questions That Get to the Soul of Your Script</h1>
+                <p class="cta-subhead">Most assessments test if you followed the rules. This one tests if you have soul.</p>
+                
+                <button class="cta-button" onclick="startAssessment()">Take the Script Health Check</button>
+                
+                <div class="assurance">
+                    <div class="assurance-item">✓ Takes 3 minutes</div>
+                    <div class="assurance-item">✓ Free</div>
+                    <div class="assurance-item">✓ Brutally honest results</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="story-section">
+            <div class="story-container">
+                <p class="story-text">Then I met a mentor who changed everything because he could see what I couldn't.</p>
+                
+                <p class="story-text">He was a screenwriting professional who told me:</p>
+                
+                <div class="mentor-callout">
+                    "You're funny, but all over the map. You need to start acting like a pro."
+                </div>
+                
+                <p class="story-text">He taught me about character and how to get to the soul of a script. Instead of hitting formulaic points the gurus handed out by the thousands, he taught me how to diagnose what was actually broken, and rebuild from the foundation up.</p>
+                
+                <p class="story-text">And I went from struggling to Shrek 2, Disenchanted, Jimmy Neutron and $2.5 billion in box office.</p>
+                
+                <p class="story-text">Not because I was special. <strong>Because someone showed me what I couldn't see on my own.</strong></p>
+                
+                <p class="story-text" style="margin-top: 40px; font-size: 20px; font-weight: 600; color: #1a1a1a;">Now, I want to do the same for screenwriters who are making the same mistakes I made when I started out.</p>
+            </div>
+        </div>
+        
+        <div class="final-cta">
+            <div class="final-cta-container">
+                <h2>Take the 3-Minute Script Health Check</h2>
+                
+                <p>Answer six questions. Get a brutally honest assessment of what's actually broken in your screenplay.</p>
+                
+                <p><strong>This isn't about formulas. It's about soul.</strong></p>
+                
+                <button class="cta-button" onclick="startAssessment()">Start the Script Health Check Now</button>
+                
+                <div style="margin-top: 30px; font-size: 16px; opacity: 0.9;">
+                    <div>✓ Free • ✓ 3 minutes • ✓ Immediate results</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="credentials">
+            <div class="credentials-container">
+                <h2>J. David Stem</h2>
+                <div class="credentials-list">
+                    <div>Shrek 2 • Jimmy Neutron • Rugrats • The Smurfs</div>
+                    <div style="margin-top: 10px;">Disney • DreamWorks • Paramount • Nickelodeon</div>
+                    <div style="margin-top: 10px;">$2.5 Billion Worldwide Box Office</div>
+                </div>
             </div>
         </div>
     </div>
     
-    <!-- PRIMARY CTA SECTION -->
-    <div class="cta-section">
-        <div class="cta-container">
-            <h1 class="cta-headline">Six Questions That Get to the Soul of Your Script</h1>
-            <p class="cta-subhead">Most assessments test if you followed the rules. This one tests if you have soul.</p>
-            
-            <a href="./assessment.html" class="cta-button">Take the Script Health Check</a>
-            
-            <div class="assurance">
-                <div class="assurance-item">✓ Takes 3 minutes</div>
-                <div class="assurance-item">✓ Free</div>
-                <div class="assurance-item">✓ Brutally honest results</div>
+    <!-- ASSESSMENT SECTION -->
+    <div id="assessmentSection" class="hidden">
+        <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); min-height: 100vh; padding: 20px;">
+            <div class="container">
+                <div class="header">
+                    <div class="logo">
+                        <div class="logo-text">THE WRITER'S</div>
+                        <div class="logo-main">FORGE</div>
+                    </div>
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar"></div>
+                </div>
+                <div class="progress-text" id="progressText">Question 1 of 8</div>
+                
+                <div class="card" id="assessmentCard">
+                    <!-- Questions will be loaded here dynamically -->
+                </div>
             </div>
         </div>
     </div>
     
-    <!-- STORY SECTION -->
-    <div class="story-section">
-        <div class="story-container">
-            <p class="story-text">Then I met a mentor who changed everything because he could see what I couldn't.</p>
-            
-            <p class="story-text">He was a screenwriting professional who told me:</p>
-            
-            <div class="mentor-callout">
-                "You're funny, but all over the map. You need to start acting like a pro."
-            </div>
-            
-            <p class="story-text">He taught me about character and how to get to the soul of a script. Instead of hitting formulaic points the gurus handed out by the thousands, he taught me how to diagnose what was actually broken, and rebuild from the foundation up.</p>
-            
-            <p class="story-text">And I went from struggling to Shrek 2, Disenchanted, Jimmy Neutron and $2.5 billion in box office.</p>
-            
-            <p class="story-text">Not because I was special. <strong>Because someone showed me what I couldn't see on my own.</strong></p>
-            
-            <p class="story-text" style="margin-top: 40px; font-size: 20px; font-weight: 600; color: #1a1a1a;">Now, I want to do the same for screenwriters who are making the same mistakes I made when I started out.</p>
-        </div>
-    </div>
-    
-    <!-- FINAL CTA -->
-    <div class="final-cta">
-        <div class="final-cta-container">
-            <h2>Take the 3-Minute Script Health Check</h2>
-            
-            <p>Answer six questions. Get a brutally honest assessment of what's actually broken in your screenplay.</p>
-            
-            <p><strong>This isn't about formulas. It's about soul.</strong></p>
-            
-            <a href="./assessment.html" class="cta-button">Start the Script Health Check Now</a>
-            
-            <div style="margin-top: 30px; font-size: 16px; opacity: 0.9;">
-                <div>✓ Free • ✓ 3 minutes • ✓ Immediate results</div>
+    <!-- RESULTS SECTION -->
+    <div id="resultsSection" class="hidden">
+        <div style="background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); min-height: 100vh; padding: 20px;">
+            <div class="container">
+                <div class="header">
+                    <div class="logo">
+                        <div class="logo-text">THE WRITER'S</div>
+                        <div class="logo-main">FORGE</div>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div class="score-label">Your Script Health Score</div>
+                    <div class="score-display" id="scoreDisplay">--</div>
+                    <p style="text-align: center; color: #999; font-size: 20px;">out of 100</p>
+                </div>
+                
+                <div class="bullshit-card">
+                    <h2>But here's the truth:</h2>
+                    <p>There is no 65/100 in Hollywood.</p>
+                    <p>Your script either makes someone want to buy it, or it gets tossed in the pile. There is no "60% pile" you can work your way out of.</p>
+                    <p><strong>A plane missing its left wing isn't 75% flying. It's not flying at all.</strong></p>
+                    <p>The same is true for scripts. You either have the essentials—soul, primal connection, character depth—or you don't.</p>
+                    <p style="margin-top: 30px; font-size: 20px;"><strong>So forget the score. Here's what actually matters:</strong></p>
+                </div>
+                
+                <div id="diagnosticContent"></div>
+                <div id="ctaContent"></div>
             </div>
         </div>
     </div>
     
-    <!-- CREDENTIALS -->
-    <div class="credentials">
-        <div class="credentials-container">
-            <h2>J. David Stem</h2>
-            <div class="credentials-list">
-                <div>Shrek 2 • Jimmy Neutron • Rugrats • The Smurfs</div>
-                <div style="margin-top: 10px;">Disney • DreamWorks • Paramount • Nickelodeon</div>
-                <div style="margin-top: 10px;">$2.5 Billion Worldwide Box Office</div>
-            </div>
-        </div>
-    </div>
+    <script>
+        const questions = [
+            {
+                number: "Let's Start",
+                question: "What's your name and email?",
+                subtext: "I'll send you your results and something that might crack you open.",
+                type: "contact",
+                fields: [
+                    { name: "firstName", label: "First Name", type: "text", required: true },
+                    { name: "email", label: "Email", type: "email", required: true }
+                ]
+            },
+            {
+                number: "Question 1",
+                question: "Have you made me fall in love by page 2?",
+                subtext: "By page 2, would a stranger reading your script already care what happens to your protagonist? Not 'like them' or 'find them interesting'—but actually CARE.",
+                type: "radio",
+                options: [
+                    "Yes—they'd be hooked immediately",
+                    "Sort of—they'd be interested",
+                    "Not really—it takes time to get to know them",
+                    "I don't know"
+                ],
+                scoring: [100, 50, 0, 0],
+                key: "q1_fallinlove"
+            },
+            {
+                number: "Question 2",
+                question: "Did you write your opening first, or discover it after writing the whole script?",
+                subtext: "You don't know what your story is ABOUT until you write it. By page 90, you've discovered the theme. Your opening—written before you knew that—is almost certainly wrong now. Pros rewrite their opening once they know what the story is really about.",
+                type: "radio",
+                options: [
+                    "I rewrote my opening after discovering what my story is about",
+                    "I tweaked it a bit but it's mostly the same",
+                    "I wrote it first and haven't touched it",
+                    "I'm not sure what you mean"
+                ],
+                scoring: ["pass", "fail", "fail", "fail"],
+                key: "q2_opening"
+            },
+            {
+                number: "Question 3",
+                question: "Did writing this crack you open?",
+                subtext: "In other words, did you cry real tears in the process of brainstorming or the treatment or script? Kafka said a book should be 'an ax to the frozen sea within.' If it didn't crack you open, god knows a busy exec or agent is not going to give a shit.",
+                type: "radio",
+                options: [
+                    "Yes—multiple times I cried",
+                    "Once or twice, briefly",
+                    "No, but I felt emotional",
+                    "No—should I have?"
+                ],
+                scoring: ["pass", "pass", "fail", "fail"],
+                key: "q3_tears"
+            },
+            {
+                number: "Question 4",
+                question: "Does your hero resonate as an archetype your audience feels on a visceral level?",
+                subtext: "Shrek is a bachelor, in denial that he needs love. Fiona is every pretty girl in the audience who feels insecure on the inside. Your characters need to be unique and fresh, yet at the same time reflect the audience back to themselves. They don't care about you. Or your story. Rather, your story is a reflection back to them of their own struggles.",
+                type: "radio",
+                options: [
+                    "Yes—I can describe them in 3 words and they feel universal",
+                    "Sort of—close but not quite there",
+                    "Not really—they're more a collection of traits",
+                    "I don't understand what you mean by archetype"
+                ],
+                scoring: ["pass", "fail", "fail", "fail"],
+                key: "q4_archetype"
+            },
+            {
+                number: "Question 5",
+                question: "Does your main character have secrets they're hiding, especially from themselves?",
+                subtext: "Reese is in love with Sarah Connor. Rick is the ultimate bachelor in Casablanca and could care less about anyone or any cause. Graham Hess in Signs hates God after the death of his wife. Dr. Malcolm Crowe in the Sixth Sense—Dead! (spoiler alert). Will in Good Will Hunting hides behind his intelligence and smart mouth, but secretly fears he's unlovable and broken because of his abuse as a child.",
+                type: "radio",
+                options: [
+                    "Yes—deep secrets they're hiding from themselves",
+                    "Some secrets but they're more surface level",
+                    "Not really—they're pretty straightforward",
+                    "I haven't thought about this"
+                ],
+                scoring: ["pass", "fail", "fail", "fail"],
+                key: "q5_secrets"
+            },
+            {
+                number: "Question 6",
+                question: "What is your movie REALLY about?",
+                subtext: "Not the plot—the emotional question it's asking. Toy Story 2: Is love worth experiencing if it ends? Signs: Can you have faith after devastating loss? This is what your story is actually about beneath the surface.",
+                type: "textarea",
+                placeholder: "Type your answer here...",
+                key: "q6_about"
+            },
+            {
+                number: "Question 7",
+                question: "Where are you in your screenwriting journey?",
+                subtext: "This helps me understand where you're at so I can give you relevant next steps.",
+                type: "radio",
+                options: [
+                    "Just starting—first script",
+                    "Written a few scripts—still learning",
+                    "Actively pursuing this as a career",
+                    "Working professionally (or close)"
+                ],
+                key: "q7_journey"
+            },
+            {
+                number: "Question 8",
+                question: "What would help you most right now?",
+                subtext: "Different writers need different things. What sounds most valuable to you?",
+                type: "radio",
+                options: [
+                    "Learning to tap into this deeper level",
+                    "Understanding what's missing in my current script",
+                    "Building a writing practice that goes this deep",
+                    "One-on-one help diagnosing my specific script"
+                ],
+                key: "q8_help"
+            }
+        ];
+        
+        let currentQuestion = -1;
+        let answers = {};
+        
+        function startAssessment() {
+            document.getElementById('landingPage').classList.add('hidden');
+            document.getElementById('assessmentSection').classList.remove('hidden');
+            window.scrollTo(0, 0);
+            currentQuestion = 0;
+            loadQuestion(0);
+        }
+        
+        function loadQuestion(index) {
+            const q = questions[index];
+            const card = document.getElementById('assessmentCard');
+            
+            let html = `
+                <div class="question-number">${q.number}</div>
+                <div class="question-text">${q.question}</div>
+                <div class="question-subtext">${q.subtext}</div>
+            `;
+            
+            if (q.type === 'contact') {
+                html += '<form id="contactForm">';
+                q.fields.forEach(field => {
+                    html += `
+                        <div class="input-group">
+                            <label class="input-label">${field.label}</label>
+                            <input type="${field.type}" name="${field.name}" ${field.required ? 'required' : ''}>
+                        </div>
+                    `;
+                });
+                html += '</form>';
+            } else if (q.type === 'radio') {
+                html += '<div class="radio-group" id="radioGroup">';
+                q.options.forEach((option, i) => {
+                    html += `
+                        <div class="radio-option" onclick="selectRadio(${i})">
+                            <input type="radio" name="question${index}" id="option${i}" value="${option}">
+                            <label for="option${i}">${option}</label>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+            } else if (q.type === 'textarea') {
+                html += `
+                    <textarea id="openEnded" placeholder="${q.placeholder || 'Type your answer here...'}"></textarea>
+                `;
+            }
+            
+            html += '<div class="button-group">';
+            if (index > 0) {
+                html += '<button class="btn btn-secondary" onclick="previousQuestion()">← Back</button>';
+            }
+            html += `<button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()">${index === questions.length - 1 ? 'See Results' : 'Next →'}</button>`;
+            html += '</div>';
+            
+            html += '<div class="reassurance">🔒 Your information is safe. We never share your data.</div>';
+            
+            card.innerHTML = html;
+            
+            const progress = ((index + 1) / questions.length) * 100;
+            document.getElementById('progressBar').style.width = progress + '%';
+            document.getElementById('progressText').textContent = `Question ${index + 1} of ${questions.length}`;
+        }
+        
+        function selectRadio(index) {
+            document.querySelectorAll('.radio-option').forEach(opt => opt.classList.remove('selected'));
+            document.querySelectorAll('.radio-option')[index].classList.add('selected');
+            document.getElementById('option' + index).checked = true;
+        }
+        
+        function nextQuestion() {
+            const q = questions[currentQuestion];
+            
+            if (q.type === 'contact') {
+                const form = document.getElementById('contactForm');
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+                const formData = new FormData(form);
+                formData.forEach((value, key) => {
+                    answers[key] = value;
+                });
+            } else if (q.type === 'radio') {
+                const selected = document.querySelector('input[name="question' + currentQuestion + '"]:checked');
+                if (!selected) {
+                    alert('Please select an answer');
+                    return;
+                }
+                const selectedIndex = Array.from(document.querySelectorAll('input[name="question' + currentQuestion + '"]')).indexOf(selected);
+                answers[q.key] = {
+                    text: selected.value,
+                    index: selectedIndex,
+                    scoring: q.scoring ? q.scoring[selectedIndex] : null
+                };
+            } else if (q.type === 'textarea') {
+                const value = document.getElementById('openEnded').value.trim();
+                if (!value) {
+                    alert('Please write your answer');
+                    return;
+                }
+                answers[q.key] = value;
+            }
+            
+            currentQuestion++;
+            
+            if (currentQuestion < questions.length) {
+                loadQuestion(currentQuestion);
+            } else {
+                showResults();
+            }
+        }
+        
+        function previousQuestion() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                loadQuestion(currentQuestion);
+            }
+        }
+        
+        function showResults() {
+            const q1Score = answers.q1_fallinlove.scoring;
+            const q2Pass = answers.q2_opening.scoring === "pass";
+            const q3Pass = answers.q3_tears.scoring === "pass";
+            const q4Pass = answers.q4_archetype.scoring === "pass";
+            const q5Pass = answers.q5_secrets.scoring === "pass";
+            
+            const allEssentialsPass = q2Pass && q3Pass && q4Pass && q5Pass;
+            
+            let numericalScore = q1Score;
+            if (q2Pass) numericalScore = Math.max(numericalScore, 70);
+            if (q3Pass) numericalScore = Math.max(numericalScore, 70);
+            if (q4Pass) numericalScore = Math.max(numericalScore, 70);
+            if (q5Pass) numericalScore = Math.max(numericalScore, 70);
+            if (allEssentialsPass) numericalScore = 100;
+            
+            console.log('Assessment completed:', answers);
+            
+            document.getElementById('assessmentSection').classList.add('hidden');
+            document.getElementById('resultsSection').classList.remove('hidden');
+            window.scrollTo(0, 0);
+            document.getElementById('scoreDisplay').textContent = numericalScore;
+            
+            generateDiagnostic({ q1Score, q2Pass, q3Pass, q4Pass, q5Pass, allEssentialsPass, answers });
+        }
+        
+        function generateDiagnostic(results) {
+            const diagnosticContent = document.getElementById('diagnosticContent');
+            const ctaContent = document.getElementById('ctaContent');
+            
+            const { q1Score, q2Pass, q3Pass, q4Pass, q5Pass, allEssentialsPass, answers } = results;
+            
+            let diagnosticHTML = '<div class="card">';
+            let ctaHTML = '<div class="cta-card">';
+            
+            if (allEssentialsPass) {
+                diagnosticHTML += '<h2>You Have It.</h2>';
+                diagnosticHTML += '<p>Soul. Primal connection. Character depth. Thematic awareness.</p>';
+                
+                if (q1Score < 50) {
+                    diagnosticHTML += '<p><strong>Your opening needs work</strong>, but that\'s craft—we can fix it. Everything else is there.</p>';
+                } else {
+                    diagnosticHTML += '<p>And your opening hooks immediately. You\'re executing at a high level.</p>';
+                }
+                
+                diagnosticHTML += '<p>You\'re not in the "maybe" pile. <strong>You\'re ready for professional-level help.</strong></p>';
+                
+                ctaHTML += '<h2>Join The Writer\'s Forge</h2>';
+                ctaHTML += '<p>This is where I teach what I learned from the pros. Diagnostic screenwriting. How to see what\'s broken. How to write with soul instead of formulas.</p>';
+                ctaHTML += '<p>It\'s free. No catch. Just writers doing the work together.</p>';
+                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white">Join The Writer\'s Forge (Free)</a>';
+            } else if (!q3Pass) {
+                diagnosticHTML += '<h2>You\'re Missing Soul.</h2>';
+                diagnosticHTML += '<p>That\'s not a "fix this and you\'re golden" problem. <strong>That\'s a fundamental problem.</strong></p>';
+                
+                diagnosticHTML += '<div class="missing-section">';
+                diagnosticHTML += '<h3>Here\'s what you told me:</h3>';
+                diagnosticHTML += `<p><em>"${answers.q3_tears.text}"</em></p>`;
+                diagnosticHTML += '<p>If writing this didn\'t crack you open, god knows a busy exec or agent isn\'t going to give a shit.</p>';
+                diagnosticHTML += '<p>Kafka said a book should be "an ax to the frozen sea within." Yours isn\'t.</p>';
+                diagnosticHTML += '</div>';
+                
+                diagnosticHTML += '<p>This isn\'t about craft. This is about doing the emotional work. Figuring out what wound you\'re actually writing about.</p>';
+                diagnosticHTML += '<p>Everything I\'ve ever written that was worth a damn—at some point I sat in my office with tears streaming down my face.</p>';
+                diagnosticHTML += '<p>That\'s your job. <strong>Make them feel something.</strong> Not "oh, that\'s clever." Make them sob.</p>';
+                
+                ctaHTML += '<h2>Join The Writer\'s Forge</h2>';
+                ctaHTML += '<p>This is a free community where we do the work. Where we learn to write from the heart, not the head. Where we crack ourselves open.</p>';
+                ctaHTML += '<p>I\'ll show you what to look for. But you have to do the work.</p>';
+                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white">Join The Writer\'s Forge (Free)</a>';
+            } else if (!q4Pass) {
+                diagnosticHTML += '<h2>Your Character Doesn\'t Resonate on a Primal Level.</h2>';
+                diagnosticHTML += '<p>The audience doesn\'t see themselves in your protagonist. And if they don\'t see themselves, they don\'t care.</p>';
+                
+                diagnosticHTML += '<div class="missing-section">';
+                diagnosticHTML += '<p>This isn\'t about making your character "likeable." It\'s about making them <strong>universal</strong>.</p>';
+                diagnosticHTML += '<p>Shrek is every bachelor in denial that he needs love. Fiona is every pretty girl who feels insecure inside. Woody is every optimist smacked in the face by reality.</p>';
+                diagnosticHTML += '<p><strong>Who is YOUR character to the audience?</strong></p>';
+                diagnosticHTML += '</div>';
+                
+                ctaHTML += '<h2>Join The Writer\'s Forge</h2>';
+                ctaHTML += '<p>Learn diagnostic screenwriting. How to build characters that connect on a visceral level. How to see what pros see.</p>';
+                ctaHTML += '<p>It\'s free. No catch. Just the work.</p>';
+                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white">Join The Writer\'s Forge (Free)</a>';
+            } else if (!q5Pass) {
+                diagnosticHTML += '<h2>Your Character Is All Surface.</h2>';
+                diagnosticHTML += '<p>They don\'t have the internal complexity that makes great characters breathe.</p>';
+                
+                diagnosticHTML += '<div class="missing-section">';
+                diagnosticHTML += '<p>Every character worth caring about is hiding something—especially from themselves.</p>';
+                diagnosticHTML += '<p>Even in Die Hard, John McClane is secretly still in love with his wife. In Toy Story, Woody is secretly jealous of Buzz and deeply ashamed of feeling this way.</p>';
+                diagnosticHTML += '<p><strong>What is YOUR character hiding from themselves?</strong></p>';
+                diagnosticHTML += '</div>';
+                
+                diagnosticHTML += '<p>This is fixable, but it requires you to understand character depth at a foundational level.</p>';
+                
+                ctaHTML += '<h2>Join The Writer\'s Forge</h2>';
+                ctaHTML += '<p>Learn how to build layered characters with internal secrets that drive external action. Join a community of writers doing the real work.</p>';
+                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white">Join The Writer\'s Forge (Free)</a>';
+            } else if (!q2Pass) {
+                diagnosticHTML += '<h2>You\'re Not Revising With Intention.</h2>';
+                diagnosticHTML += '<p>You wrote your opening before you knew what your story was about, and you never went back to fix it.</p>';
+                
+                diagnosticHTML += '<div class="missing-section">';
+                diagnosticHTML += '<p>This tells me you don\'t understand that <strong>storytelling is discovery</strong>.</p>';
+                diagnosticHTML += '<p>You don\'t know what your story is ABOUT until you write it. By page 90, you\'ve discovered the theme. Your opening—written before you knew that—is almost certainly wrong now.</p>';
+                diagnosticHTML += '<p>Your opening is a promise about what your story is REALLY about—not just what happens.</p>';
+                diagnosticHTML += '</div>';
+                
+                ctaHTML += '<h2>Join The Writer\'s Forge</h2>';
+                ctaHTML += '<p>Learn how pros think. How they diagnose first, then rewrite with intention. How they structure stories around emotional truth, not just plot.</p>';
+                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white">Join The Writer\'s Forge (Free)</a>';
+            } else {
+                diagnosticHTML += '<h2>You\'re Missing Several Essential Elements.</h2>';
+                diagnosticHTML += '<p>This isn\'t about polish—it\'s about foundation.</p>';
+                diagnosticHTML += '<p>You\'re treating screenwriting like a puzzle to solve instead of a story to feel. And that\'s why your script isn\'t working.</p>';
+                
+                ctaHTML += '<h2>Join The Writer\'s Forge</h2>';
+                ctaHTML += '<p>Start from the beginning. Learn the fundamentals of emotional storytelling. Do the work with other writers who are serious about going deeper.</p>';
+                ctaHTML += '<p>It\'s free. No gurus. No formulas. Just the work.</p>';
+                ctaHTML += '<a href="https://skool.com/the-writers-forge" class="btn-white">Join The Writer\'s Forge (Free)</a>';
+            }
+            
+            diagnosticHTML += '</div>';
+            ctaHTML += '</div>';
+            
+            diagnosticContent.innerHTML = diagnosticHTML;
+            ctaContent.innerHTML = ctaHTML;
+        }
+    </script>
 </body>
 </html>
+```
+
+---
+
+**Done! This is one complete HTML file with:**
+- Landing page (hero + story + CTAs)
+- Assessment (8 questions)
+- Results (score + diagnosis + CTA to Forge)
+
+**Just save this as `index.html` and upload to GitHub Pages. One file. Done.**
