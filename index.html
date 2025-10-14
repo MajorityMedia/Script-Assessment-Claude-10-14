@@ -37,6 +37,11 @@
             background: #000;
         }
         
+        /* Hidden iframe for Mailchimp submission */
+        #mc-iframe {
+            display: none;
+        }
+        
         /* LANDING PAGE STYLES */
         .hero {
             background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
@@ -729,6 +734,9 @@
     </style>
 </head>
 <body>
+    <!-- Hidden iframe for Mailchimp submission -->
+    <iframe name="mc-iframe" id="mc-iframe"></iframe>
+    
     <!-- LANDING PAGE -->
     <div id="landingPage">
         <!-- HERO SECTION (Dark - The Full Story) -->
@@ -1051,6 +1059,44 @@
             loadQuestion(0);
         }
         
+        function submitToMailchimp(firstName, email) {
+            // Create a hidden form to submit to Mailchimp
+            const form = document.createElement('form');
+            form.method = 'POST';
+            form.action = 'https://skool.us5.list-manage.com/subscribe/post?u=1a123613225facde716a78753&id=132c1922ef&f_id=0099f3e0f0';
+            form.target = 'mc-iframe';
+            
+            // Add email field
+            const emailInput = document.createElement('input');
+            emailInput.type = 'email';
+            emailInput.name = 'EMAIL';
+            emailInput.value = email;
+            form.appendChild(emailInput);
+            
+            // Add first name field
+            const fnameInput = document.createElement('input');
+            fnameInput.type = 'text';
+            fnameInput.name = 'FNAME';
+            fnameInput.value = firstName;
+            form.appendChild(fnameInput);
+            
+            // Add honeypot field (leave empty to avoid bots)
+            const honeypot = document.createElement('input');
+            honeypot.type = 'text';
+            honeypot.name = 'b_1a123613225facde716a78753_132c1922ef';
+            honeypot.value = '';
+            honeypot.style.position = 'absolute';
+            honeypot.style.left = '-5000px';
+            form.appendChild(honeypot);
+            
+            // Append form to body, submit, then remove
+            document.body.appendChild(form);
+            form.submit();
+            document.body.removeChild(form);
+            
+            console.log('Submitted to Mailchimp:', { firstName, email });
+        }
+        
         function loadQuestion(index) {
             const q = questions[index];
             const card = document.getElementById('assessmentCard');
@@ -1124,6 +1170,10 @@
                 formData.forEach((value, key) => {
                     answers[key] = value;
                 });
+                
+                // Submit to Mailchimp when they complete the contact form
+                submitToMailchimp(answers.firstName, answers.email);
+                
             } else if (q.type === 'radio') {
                 const selected = document.querySelector('input[name="question' + currentQuestion + '"]:checked');
                 if (!selected) {
