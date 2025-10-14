@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Script Health Check - The Writer's Forge</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #000;
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #fff;
+            padding: 60px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            margin-bottom: 40px;
+        }
+        
+        .logo-text {
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            color: #ccc;
+        }
+        
+        .logo-main {
+            font-size: 42px;
+            font-weight: 900;
+            letter-spacing: 6px;
+            color: #ff4500;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .quote {
+            font-size: 28px;
+            font-style: italic;
+            color: #aaa;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .billion {
+            font-size: 56px;
+            font-weight: 900;
+            color: #ff4500;
+            margin: 30px 0;
+            text-shadow: 3px 3px 6px rgba(255, 69, 0, 0.3);
+            letter-spacing: 2px;
+        }
+        
+        .hook {
+            font-size: 22px;
+            line-height: 1.5;
+            margin: 30px 0;
+            color: #e0e0e0;
+        }
+        
+        .hook strong {
+            color: #fff;
+            font-weight: 700;
+        }
+        
+        .cta-section {
+            background: #fff;
+            padding: 60px 20px;
+        }
+        
+        .cta-container {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .cta-headline {
+            font-size: 32px;
+            font-weight: 800;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .cta-subhead {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .cta-button {
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 20px 50px;
+            font-size: 20px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.3);
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 30px 0;
+            display: inline-block;
+            text-decoration: none;
+        }
+        
+        .cta-button:hover {
+            background: #ff6b35;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 69, 0, 0.4);
+        }
+        
+        .assurance {
+            font-size: 15px;
+            color: #666;
+            margin-top: 20px;
+        }
+        
+        .assurance-item {
+            display: inline-block;
+            margin: 5px 15px;
+        }
+        
+        .story-section {
+            background: #f5f5f5;
+            padding: 60px 20px;
+        }
+        
+        .story-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .story-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 25px;
+        }
+        
+        .story-text strong {
+            color: #ff4500;
+            font-weight: 700;
+        }
+        
+        .mentor-callout {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #ff4500;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 19px;
+            color: #333;
+        }
+        
+        .final-cta {
+            background: linear-gradient(135deg, #ff4500 0%, #ff6b35 100%);
+            color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .final-cta-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .final-cta h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .final-cta p {
+            font-size: 19px;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        
+        .final-cta .cta-button {
+            background: #fff;
+            color: #ff4500;
+            margin-top: 30px;
+        }
+        
+        .final-cta .cta-button:hover {
+            background: #f5f5f5;
+            color: #ff4500;
+        }
+        
+        .credentials {
+            background: #2d2d2d;
+            color: #fff;
+            padding: 40px 20px;
+        }
+        
+        .credentials-container {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .credentials h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: #ff4500;
+        }
+        
+        .credentials-list {
+            font-size: 16px;
+            line-height: 1.8;
+            margin: 15px 0;
+            color: #ccc;
+        }
+        
+        @media (max-width: 768px) {
+            .quote {
+                font-size: 22px;
+            }
+            
+            .billion {
+                font-size: 42px;
+            }
+            
+            .hook {
+                font-size: 18px;
+            }
+            
+            .cta-headline {
+                font-size: 26px;
+            }
+            
+            .cta-button {
+                padding: 18px 40px;
+                font-size: 18px;
+            }
+            
+            .story-text {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <div class="container">
+            <div class="logo">
+                <div class="logo-text">THE WRITER'S</div>
+                <div class="logo-main">FORGE</div>
+            </div>
+            
+            <p class="quote">"You'll never make a dime as a screenwriter..."</p>
+            
+            <div class="billion">$2.5 BILLION LATER</div>
+            
+            <div class="hook">
+                <p>I succeeded. But here's the truth.</p>
+                <p><strong>That exec wasn't wrong about me.</strong></p>
+                <p style="margin-top: 20px;">I had talent. But I was all over the map—jumping into drafts because an idea "felt so good it would write itself," then stalling out by page 30.</p>
+                <p style="margin-top: 20px;"><strong>If I kept doing what I was doing, I never would have made it as a writer.</strong></p>
+                <p style="margin-top: 20px;">Then I met a mentor who changed everything.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- PRIMARY CTA SECTION -->
+    <div class="cta-section">
+        <div class="cta-container">
+            <h1 class="cta-headline">Six Questions That Get to the Soul of Your Script</h1>
+            <p class="cta-subhead">Most assessments test if you followed the rules. This one tests if you have soul.</p>
+            
+            <a href="./assessment.html" class="cta-button">Take the Script Health Check</a>
+            
+            <div class="assurance">
+                <div class="assurance-item">✓ Takes 3 minutes</div>
+                <div class="assurance-item">✓ Free</div>
+                <div class="assurance-item">✓ Brutally honest results</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- STORY SECTION -->
+    <div class="story-section">
+        <div class="story-container">
+            <p class="story-text">Then I met a mentor who changed everything because he could see what I couldn't.</p>
+            
+            <p class="story-text">He was a screenwriting professional who told me:</p>
+            
+            <div class="mentor-callout">
+                "You're funny, but all over the map. You need to start acting like a pro."
+            </div>
+            
+            <p class="story-text">He taught me about character and how to get to the soul of a script. Instead of hitting formulaic points the gurus handed out by the thousands, he taught me how to diagnose what was actually broken, and rebuild from the foundation up.</p>
+            
+            <p class="story-text">And I went from struggling to Shrek 2, Disenchanted, Jimmy Neutron and $2.5 billion in box office.</p>
+            
+            <p class="story-text">Not because I was special. <strong>Because someone showed me what I couldn't see on my own.</strong></p>
+            
+            <p class="story-text" style="margin-top: 40px; font-size: 20px; font-weight: 600; color: #1a1a1a;">Now, I want to do the same for screenwriters who are making the same mistakes I made when I started out.</p>
+        </div>
+    </div>
+    
+    <!-- FINAL CTA -->
+    <div class="final-cta">
+        <div class="final-cta-container">
+            <h2>Take the 3-Minute Script Health Check</h2>
+            
+            <p>Answer six questions. Get a brutally honest assessment of what's actually broken in your screenplay.</p>
+            
+            <p><strong>This isn't about formulas. It's about soul.</strong></p>
+            
+            <a href="./assessment.html" class="cta-button">Start the Script Health Check Now</a>
+            
+            <div style="margin-top: 30px; font-size: 16px; opacity: 0.9;">
+                <div>✓ Free • ✓ 3 minutes • ✓ Immediate results</div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CREDENTIALS -->
+    <div class="credentials">
+        <div class="credentials-container">
+            <h2>J. David Stem</h2>
+            <div class="credentials-list">
+                <div>Shrek 2 • Jimmy Neutron • Rugrats • The Smurfs</div>
+                <div style="margin-top: 10px;">Disney • DreamWorks • Paramount • Nickelodeon</div>
+                <div style="margin-top: 10px;">$2.5 Billion Worldwide Box Office</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
